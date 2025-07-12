@@ -2,8 +2,8 @@
 title: The Greenhouse
 email: hello@thegreenhouse.coach
 description: Professional coaching consultancy helping individuals and teams reach their potential.
-baseurl: ""
-url: "https://yourusername.github.io"
+url: "https://andrew-findlay.github.io"
+baseurl: "/the-greenhouse"
 
 # Business info
 business:

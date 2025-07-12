@@ -36,3 +36,4 @@ This site is ready for GitHub Pages deployment. Just push to your repository and
 - ⚡ Fast loading with optimized assets
 
 Built with Jekyll and 💚 by Claude
+# Updated config
