@@ -1,3 +1,6 @@
+---
+layout: none
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Loading - The Greenhouse</title>
-    <link rel="stylesheet" href="/the-greenhouse/assets/css/style.css">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 <body>
 
@@ -46,7 +49,7 @@
 // Loading page animation and redirect
 document.addEventListener('DOMContentLoaded', function() {
     function goToMainPage() {
-        window.location.href = 'main.html';
+        window.location.href = '{{ "/main.html" | relative_url }}';
     }
     
     // Add click handler to skip loading page
