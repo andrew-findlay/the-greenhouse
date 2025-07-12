@@ -1,0 +1,27 @@
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>{{ site.business.name }}</h3>
+                <p>{{ site.business.tagline }}</p>
+                <p>{{ site.description }}</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <p>📧 {{ site.business.email }}</p>
+                {%- if site.business.phone -%}
+                <p>📞 {{ site.business.phone }}</p>
+                {%- endif -%}
+                {%- if site.business.address -%}
+                <p>📍 {{ site.business.address }}</p>
+                {%- endif -%}
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; {{ 'now' | date: "%Y" }} {{ site.business.name }}. All rights reserved.</p>
+            <p>Growing together, one conversation at a time. 🌱</p>
+        </div>
+    </div>
+</footer>

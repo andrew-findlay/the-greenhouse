@@ -1,0 +1,111 @@
+---
+layout: default
+title: Home
+description: Professional coaching consultancy helping individuals and teams reach their potential.
+---
+
+<!-- Title Section -->
+<section id="title" class="title-section">
+    <div class="container">
+        <div class="title-content">
+            <h1 class="main-title">
+                <span class="title-word word-1">The</span>
+                <span class="title-word word-2">Greenhouse</span>
+            </h1>
+        </div>
+    </div>
+</section>
+
+<!-- Hero Section with Three Sections -->
+<section id="home" class="hero-section">
+    <div class="container">
+        <div class="hero-content">
+            <div class="hero-left">
+                <a href="#about" class="hero-link">About</a>
+            </div>
+            <div class="hero-center">
+                <div class="hero-image">
+                    <a href="#about">
+                        <img src="{{ '/assets/images/profile-photo.jpeg' | relative_url }}" alt="Profile Photo" class="profile-photo">
+                    </a>
+                </div>
+            </div>
+            <div class="hero-right">
+                <a href="#services" class="hero-link">Services</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="about-section">
+    <div class="container">
+        <div class="section-content">
+            <h2>About</h2>
+            <p>We believe in the power of focused conversation and strategic guidance to help you discover your unique
+                voice and create lasting impact.</p>
+
+            <div class="about-grid">
+                {%- for card in site.about_cards -%}
+                <div class="about-card">
+                    <h3>{{ card.title }}</h3>
+                    <p>{{ card.description }}</p>
+                </div>
+                {%- endfor -%}
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="services-section">
+    <div class="container">
+        <div class="section-content">
+            <h2>Services</h2>
+            <p>Focused coaching services designed to help you clarify your purpose, develop your capabilities, and
+                achieve meaningful results.</p>
+
+            <div class="services-grid">
+                {%- for service in site.services -%}
+                <div class="service-card">
+                    <div class="service-content">
+                        <h3>{{ service.title }}</h3>
+                        <p>{{ service.description }}</p>
+                    </div>
+                </div>
+                {%- endfor -%}
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section id="testimonials" class="testimonials-section">
+    <div class="container">
+        <div class="section-content">
+            <h2>Testimonials</h2>
+            <p>What our clients say about their transformation journey.</p>
+
+            <div class="testimonials-grid">
+                {%- for testimonial in site.testimonials -%}
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">{{ testimonial.quote }}</div>
+                    <div class="testimonial-author">{{ testimonial.author }}</div>
+                </div>
+                {%- endfor -%}
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact-section">
+    <div class="container">
+        <div class="section-content">
+            <h2>Contact</h2>
+            <p>Ready to begin? Let's start a conversation about your goals.</p>
+
+            {%- include contact-form.html -%}
+        </div>
+    </div>
+</section>

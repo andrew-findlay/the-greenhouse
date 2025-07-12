@@ -1,0 +1,73 @@
+# Site settings
+title: The Greenhouse
+email: hello@thegreenhouse.coach
+description: Professional coaching consultancy helping individuals and teams reach their potential.
+baseurl: ""
+url: "https://yourusername.github.io"
+
+# Business info
+business:
+  name: "The Greenhouse"
+  tagline: "Professional coaching consultancy"
+  email: "hello@thegreenhouse.coach"
+  phone: "+44 (0) 20 7123 4567"
+  address: "London, UK"
+
+# Navigation
+navigation:
+  - title: "About"
+    url: "#about"
+  - title: "Services"
+    url: "#services"
+  - title: "Testimonials"
+    url: "#testimonials"
+  - title: "Contact"
+    url: "#contact"
+
+# Services
+services:
+  - title: "Leadership Coaching"
+    description: "Develop authentic leadership skills that inspire and drive results through focused one-on-one sessions."
+  - title: "Team Development"
+    description: "Build high-performing teams through strategic workshops and ongoing facilitation."
+  - title: "Career Transition"
+    description: "Navigate career changes with clarity and confidence through structured coaching programmes."
+  - title: "Executive Presence"
+    description: "Develop the gravitas and communication skills needed for senior leadership roles."
+  - title: "Strategic Planning"
+    description: "Create clear, actionable strategies that align with your vision and drive measurable results."
+
+# About cards
+about_cards:
+  - title: "Clarity"
+    description: "We cut through complexity to help you see what matters most and create focused action plans."
+  - title: "Growth"
+    description: "Sustainable development through structured programmes that build lasting capabilities."
+  - title: "Results"
+    description: "Measurable outcomes that demonstrate real progress toward your most important goals."
+
+# Testimonials
+testimonials:
+  - quote: "The coaching process helped me gain clarity on my leadership style and significantly improved my team's performance."
+    author: "Sarah Johnson, CEO"
+  - quote: "Professional, insightful, and transformative. The strategic planning session was exactly what our company needed."
+    author: "Michael Chen, Founder"
+  - quote: "I finally found my direction and confidence to make the career transition I'd been considering for years."
+    author: "Emma Wilson, Director"
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Exclude from processing
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/
+  - README.md

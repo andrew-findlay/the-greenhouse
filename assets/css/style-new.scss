@@ -1,0 +1,559 @@
+--- ---
+/* BERGSTROM STUDIO INSPIRED MINIMALIST DESIGN */
+
+/* Variables - Ultra minimal color palette */
+:root {
+    --pure-white: #ffffff;
+    --pure-black: #000000;
+    --soft-gray: #f8f8f8;
+    --medium-gray: #666666;
+    --light-gray: #e5e5e5;
+    --accent-color: #2c2c2c;
+    --primary-font: 'Helvetica Neue', Arial, sans-serif;
+    --secondary-font: 'Georgia', serif;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--primary-font);
+    line-height: 1.6;
+    color: var(--pure-black);
+    background: var(--pure-white);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* Header - Ultra minimal */
+.site-header {
+    background: var(--pure-white);
+    border-bottom: 1px solid var(--light-gray);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    padding: 0;
+}
+
+.site-header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+    min-height: 80px;
+}
+
+.site-header .logo {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--pure-black);
+    text-decoration: none;
+    letter-spacing: -0.5px;
+}
+
+.site-header .logo .logo-icon {
+    display: none;
+    /* Remove emoji for minimalist look */
+}
+
+.site-header .logo .logo-text {
+    font-weight: 600;
+}
+
+.site-header .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 60px;
+}
+
+.site-header .nav-links a {
+    text-decoration: none;
+    color: var(--pure-black);
+    font-weight: 400;
+    font-size: 16px;
+    transition: color 0.2s ease;
+    letter-spacing: 0.5px;
+}
+
+.site-header .nav-links a:hover {
+    color: var(--medium-gray);
+}
+
+.site-header .mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 0;
+}
+
+.site-header .mobile-menu-btn span {
+    width: 20px;
+    height: 1px;
+    background: var(--pure-black);
+    margin: 3px 0;
+    transition: all 0.3s ease;
+}
+}
+
+// Main content spacing
+.page-content {
+    margin-top: 80px;
+}
+
+section {
+    padding: 120px 0;
+    min-height: auto;
+    display: block;
+}
+
+.section-content {
+    background: none;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+
+    h2 {
+        font-size: 48px;
+        font-weight: 300;
+        color: $pure-black;
+        text-align: center;
+        margin-bottom: 40px;
+        letter-spacing: -1px;
+        font-family: $primary-font;
+    }
+
+    >p {
+        font-size: 20px;
+        line-height: 1.8;
+        text-align: center;
+        margin-bottom: 60px;
+        color: $medium-gray;
+        font-weight: 300;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+// Hero Section - Minimal and impactful
+.hero-section {
+    background: $pure-white;
+    text-align: center;
+    padding: 200px 0;
+
+    .hero-content {
+        background: none;
+        border: none;
+        color: $pure-black;
+        padding: 0;
+        backdrop-filter: none;
+
+        h1 {
+            font-size: 72px;
+            font-weight: 300;
+            margin-bottom: 30px;
+            letter-spacing: -2px;
+            line-height: 1.1;
+            color: $pure-black;
+            font-family: $primary-font;
+        }
+
+        p {
+            font-size: 24px;
+            margin-bottom: 60px;
+            color: $medium-gray !important;
+            font-weight: 300;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.5;
+        }
+    }
+
+    .cta-button {
+        display: inline-block;
+        padding: 18px 40px;
+        background: $pure-black;
+        color: $pure-white;
+        text-decoration: none;
+        border: none;
+        font-weight: 400;
+        font-size: 16px;
+        letter-spacing: 0.5px;
+        transition: all 0.3s ease;
+        border-radius: 0;
+
+        &:hover {
+            background: $accent-color;
+        }
+    }
+}
+
+// About Section - Clean grid
+.about-section {
+    background: $soft-gray;
+
+    .about-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 80px;
+        margin-top: 80px;
+    }
+
+    .about-card {
+        background: $pure-white;
+        border: none;
+        border-radius: 0;
+        padding: 60px 40px;
+        text-align: left;
+        box-shadow: none;
+        transition: none;
+
+        &:hover {
+            transform: none;
+        }
+
+        .card-icon {
+            font-size: 32px;
+            margin-bottom: 30px;
+            color: $pure-black;
+        }
+
+        h3 {
+            font-size: 24px;
+            font-weight: 500;
+            color: $pure-black;
+            margin-bottom: 20px;
+            letter-spacing: -0.5px;
+        }
+
+        p {
+            font-size: 16px;
+            color: $medium-gray;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+    }
+}
+
+// Services Section - Minimal list style
+.services-section {
+    background: $pure-white;
+
+    .services-grid {
+        display: block;
+        margin-top: 80px;
+    }
+
+    .service-card {
+        background: none;
+        border: none;
+        border-bottom: 1px solid $light-gray;
+        border-radius: 0;
+        padding: 60px 0;
+        text-align: left;
+        box-shadow: none;
+        transition: none;
+        display: flex;
+        align-items: flex-start;
+        gap: 40px;
+
+        &:hover {
+            transform: none;
+            border-color: $pure-black;
+        }
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        .service-icon {
+            font-size: 32px;
+            margin: 0;
+            flex-shrink: 0;
+            color: $pure-black;
+        }
+
+        .service-content {
+            flex: 1;
+        }
+
+        h3 {
+            font-size: 24px;
+            font-weight: 500;
+            color: $pure-black;
+            margin-bottom: 15px;
+            letter-spacing: -0.5px;
+        }
+
+        p {
+            font-size: 16px;
+            color: $medium-gray;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+    }
+}
+
+// Contact Section - Clean form
+.contact-section {
+    background: $soft-gray;
+
+    .contact-form {
+        max-width: 600px;
+        margin: 80px auto 0;
+    }
+
+    .form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        margin-bottom: 30px;
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .form-group {
+        margin-bottom: 30px;
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 500;
+            color: $pure-black;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        input,
+        textarea,
+        select {
+            width: 100%;
+            padding: 20px;
+            border: 1px solid $light-gray;
+            border-radius: 0;
+            font-size: 16px;
+            font-family: inherit;
+            background: $pure-white;
+            transition: border-color 0.2s ease;
+
+            &:focus {
+                outline: none;
+                border-color: $pure-black;
+            }
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+    }
+
+    .submit-btn {
+        width: 100%;
+        padding: 20px;
+        background: $pure-black;
+        color: $pure-white;
+        border: none;
+        font-size: 16px;
+        font-weight: 400;
+        cursor: pointer;
+        letter-spacing: 0.5px;
+        transition: background-color 0.3s ease;
+        border-radius: 0;
+
+        &:hover {
+            background: $accent-color;
+        }
+
+        .btn-icon {
+            display: none; // Remove emoji for minimalist look
+        }
+    }
+
+    .form-note {
+        margin-top: 30px;
+        text-align: center;
+
+        p {
+            margin: 10px 0;
+            color: $medium-gray;
+            font-size: 14px;
+        }
+    }
+}
+
+// Footer - Minimal
+.site-footer {
+    background: $pure-white;
+    color: $pure-black;
+    padding: 80px 0 40px;
+    margin-top: 0;
+    border-top: 1px solid $light-gray;
+
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 60px;
+        margin-bottom: 40px;
+    }
+
+    .footer-section {
+
+        h3,
+        h4 {
+            margin-bottom: 20px;
+            color: $pure-black;
+            font-size: 18px;
+            font-weight: 500;
+            letter-spacing: -0.5px;
+        }
+
+        p {
+            margin-bottom: 10px;
+            color: $medium-gray;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+    }
+
+    .footer-bottom {
+        text-align: center;
+        padding-top: 40px;
+        border-top: 1px solid $light-gray;
+
+        p {
+            margin: 10px 0;
+            color: $medium-gray;
+            font-size: 14px;
+        }
+    }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    .hero-section {
+        padding: 120px 0;
+
+        .hero-content h1 {
+            font-size: 48px;
+        }
+    }
+
+    .section-content {
+        h2 {
+            font-size: 36px;
+        }
+
+        >p {
+            font-size: 18px;
+        }
+    }
+
+    section {
+        padding: 80px 0;
+    }
+
+    .site-header {
+        .nav-links {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: $pure-white;
+            flex-direction: column;
+            padding: 40px;
+            gap: 30px;
+            border-bottom: 1px solid $light-gray;
+
+            &.active {
+                display: flex;
+            }
+
+            a {
+                font-size: 18px;
+            }
+        }
+
+        .mobile-menu-btn {
+            display: flex;
+        }
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        margin-top: 40px;
+    }
+
+    .about-card {
+        padding: 40px 20px;
+    }
+
+    .service-card {
+        flex-direction: column;
+        gap: 20px;
+        padding: 40px 0;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+
+// Remove all animations and transitions for true minimalism
+* {
+    animation: none !important;
+    transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+// Clean, minimal scrollbar
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: $pure-white;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $light-gray;
+    border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: $medium-gray;
+}
+
+// Selection styling
+::selection {
+    background: $pure-black;
+    color: $pure-white;
+}
