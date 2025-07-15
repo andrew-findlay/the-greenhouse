@@ -172,10 +172,10 @@ body {
 /* Title Section with Animated Vines */
 .title-section {
     background: var(--dark-green);
-    padding: 100px 0;
+    padding: 40px 0;
     position: relative;
     overflow: hidden;
-    min-height: 300px;
+    min-height: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -197,6 +197,7 @@ body {
     font-family: var(--primary-font);
     position: relative;
     z-index: 3;
+    text-transform: uppercase;
 }
 
 .title-section .title-word {
@@ -286,7 +287,7 @@ body {
 }
 
 section {
-    padding: 120px 0;
+    padding: 40px 0;
     min-height: auto;
     display: block;
     background: var(--dark-green);
@@ -318,7 +319,7 @@ section {
     font-size: 20px;
     line-height: 1.8;
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
     color: var(--muted-text);
     font-weight: 300;
     max-width: 600px;
@@ -349,8 +350,7 @@ section {
 /* Hero Section */
 .hero-section {
     background: var(--dark-green);
-    padding: 200px 0;
-    min-height: 100vh;
+    padding: 40px 0;
     display: flex;
     align-items: center;
 }
@@ -438,11 +438,11 @@ section {
     background: var(--dark-green);
 }
 
-.about-section .about-cards {
+.about-section .about-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 40px;
-    margin-top: 60px;
+    margin-top: 40px;
 }
 
 .about-section .about-card {
@@ -473,36 +473,60 @@ section {
     font-weight: 300;
 }
 
+/* Founder info section */
+.founder-info {
+    margin-top: 80px;
+    padding-top: 60px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.founder-info h3 {
+    font-size: 32px;
+    font-weight: 500;
+    color: var(--light-text);
+    margin-bottom: 30px;
+    letter-spacing: -0.5px;
+    text-align: center;
+}
+
+.founder-info p {
+    font-size: 16px;
+    color: var(--muted-text);
+    line-height: 1.8;
+    font-weight: 300;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.founder-info p:last-child {
+    margin-bottom: 0;
+}
+
 /* Services Section */
 .services-section {
     background: var(--dark-green);
 }
 
 .services-section .services-grid {
-    display: block;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
     margin-top: 80px;
 }
 
 .services-section .service-card {
     background: none;
-    border: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 0;
-    padding: 60px 0;
+    padding: 40px 30px;
     text-align: left;
     box-shadow: none;
-    transition: none;
-    display: flex;
-    align-items: flex-start;
-    gap: 40px;
+    transition: border-color 0.3s ease;
+    display: block;
 }
 
 .services-section .service-card:hover {
     border-color: var(--light-text);
-}
-
-.services-section .service-card:last-child {
-    border-bottom: none;
 }
 
 .services-section .service-card .service-icon {
@@ -514,73 +538,18 @@ section {
 }
 
 .services-section .service-card h3 {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 500;
     color: var(--light-text);
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     letter-spacing: -0.5px;
+    line-height: 1.3;
 }
 
 .services-section .service-card p {
     font-size: 16px;
     color: var(--muted-text);
     line-height: 1.8;
-    font-weight: 300;
-}
-
-/* Testimonials Section */
-.testimonials-section {
-    background: var(--dark-green);
-}
-
-.testimonials-section .testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 60px;
-    margin-top: 80px;
-}
-
-.testimonials-section .testimonial-card {
-    background: none;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 0;
-    padding: 60px 40px;
-    text-align: left;
-    box-shadow: none;
-    transition: border-color 0.3s ease;
-}
-
-.testimonials-section .testimonial-card:hover {
-    border-color: var(--light-text);
-}
-
-.testimonials-section .testimonial-card .quote-icon {
-    font-size: 48px;
-    color: var(--muted-text);
-    margin-bottom: 20px;
-    line-height: 1;
-}
-
-.testimonials-section .testimonial-card .quote {
-    font-style: italic;
-    font-size: 18px;
-    color: var(--light-text);
-    line-height: 1.8;
-    margin-bottom: 30px;
-    font-weight: 300;
-}
-
-.testimonials-section .testimonial-card .author {
-    font-weight: 500;
-    color: var(--light-text);
-    font-size: 16px;
-    margin-bottom: 5px;
-    letter-spacing: -0.2px;
-}
-
-.testimonials-section .testimonial-card .role {
-    color: var(--muted-text);
-    font-size: 14px;
     font-weight: 300;
 }
 
@@ -668,6 +637,20 @@ section {
     background: var(--muted-text);
 }
 
+.contact-section .form-note {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.contact-section .form-note p {
+    margin: 5px 0;
+    color: var(--muted-text);
+}
+
+.contact-section .form-note small {
+    font-size: 14px;
+}
+
 /* Footer */
 .site-footer {
     background: var(--dark-green);
@@ -678,8 +661,8 @@ section {
 }
 
 .site-footer .footer-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    display: flex;
+    justify-content: center;
     gap: 60px;
     margin-bottom: 40px;
 }
@@ -810,10 +793,13 @@ section {
         padding: 40px 20px;
     }
 
-    .services-section .service-card {
-        flex-direction: column;
+    .services-section .services-grid {
+        grid-template-columns: 1fr;
         gap: 20px;
-        padding: 40px 0;
+    }
+
+    .services-section .service-card {
+        padding: 30px 20px;
     }
 
     .contact-section .form-row {
@@ -825,7 +811,7 @@ section {
         gap: 40px;
     }
 
-    .about-section .about-cards {
+    .about-section .about-grid {
         grid-template-columns: 1fr;
         gap: 30px;
     }
@@ -841,6 +827,7 @@ section {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }

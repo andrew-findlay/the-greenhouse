@@ -1,0 +1,93 @@
+---
+layout: default
+title: Loading - The Greenhouse
+description: Welcome to The Greenhouse
+---
+
+<!-- Loading Page -->
+<section id="loading" class="loading-section">
+    <div class="loading-container">
+        <!-- THE GREENHOUSE at top -->
+        <div class="loading-header">
+            <h1 class="loading-title">THE GREENHOUSE</h1>
+        </div>
+
+        <!-- Animated text area -->
+        <div class="animated-text-container">
+            <div class="animated-text" id="animatedText">
+                <span class="word" data-word="WE">
+                    <span class="letter">W</span>
+                    <span class="letter">E</span>
+                </span>
+                <span class="word" data-word="GROW">
+                    <span class="letter">G</span>
+                    <span class="letter">R</span>
+                    <span class="letter">O</span>
+                    <span class="letter">W</span>
+                </span>
+                <span class="word" data-word="YOU">
+                    <span class="letter">Y</span>
+                    <span class="letter">O</span>
+                    <span class="letter">U</span>
+                </span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    // Loading page animation and redirect
+    document.addEventListener('DOMContentLoaded', function () {
+        const words = ['WE', 'GROW', 'YOU'];
+        let currentWordIndex = 0;
+        let animationCount = 0;
+        const maxAnimations = 6; // Show 2 full cycles (WE GROW YOU x 2)
+
+        function animateWord() {
+            const word = words[currentWordIndex];
+            const animatedText = document.getElementById('animatedText');
+
+            // Clear previous content
+            animatedText.innerHTML = '';
+
+            // Create word container
+            const wordElement = document.createElement('span');
+            wordElement.className = 'word active';
+            wordElement.setAttribute('data-word', word);
+
+            // Create individual letters
+            for (let i = 0; i < word.length; i++) {
+                const letterElement = document.createElement('span');
+                letterElement.className = 'letter';
+                letterElement.textContent = word[i];
+                letterElement.style.animationDelay = `${i * 0.1}s`;
+                wordElement.appendChild(letterElement);
+            }
+
+            animatedText.appendChild(wordElement);
+
+            // Schedule slide out animation
+            setTimeout(() => {
+                wordElement.classList.add('slide-out');
+            }, 1000); // Letters load in, then slide out after 1 second
+
+            // Move to next word
+            setTimeout(() => {
+                currentWordIndex = (currentWordIndex + 1) % words.length;
+                animationCount++;
+
+                if (animationCount < maxAnimations) {
+                    animateWord();
+                } else {
+                    // Redirect to main page after animations complete
+                    setTimeout(() => {
+                        window.location.href = '/main.html';
+                    }, 500);
+                }
+            }, 1500); // Total time per word
+        }
+
+        // Start the animation sequence
+        setTimeout(animateWord, 500); // Start after 0.5 seconds
+    });
+</script>

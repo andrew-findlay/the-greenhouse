@@ -25,8 +25,9 @@ description: Professional coaching consultancy helping individuals and teams rea
             </div>
             <div class="hero-center">
                 <div class="hero-image">
-                    <a href="#about">
-                        <img src="{{ '/assets/images/profile-photo.jpeg' | relative_url }}" alt="Profile Photo" class="profile-photo">
+                    <a href="#meet-emma">
+                        <img src="{{ '/assets/images/profile-photo.jpeg' | relative_url }}" alt="Profile Photo"
+                            class="profile-photo">
                     </a>
                 </div>
             </div>
@@ -41,9 +42,10 @@ description: Professional coaching consultancy helping individuals and teams rea
 <section id="about" class="about-section">
     <div class="container">
         <div class="section-content">
-            <h2>About</h2>
-            <p>We believe in the power of focused conversation and strategic guidance to help you discover your unique
-                voice and create lasting impact.</p>
+            <h2>About The Greenhouse</h2>
+            <p>A coaching consultancy for people, teams and ideas. The greenhouse exists as a place where things grow; with the recognition that everything within it has different needs, perspectives, experiences and outcomes.</p>
+            
+            <p>It is a place that centres people and recognises the systems and structures in place that can harm and oppress, and works actively against these, advocating and delivering an equitable practice.</p>
 
             <div class="about-grid">
                 {%- for card in site.about_cards -%}
@@ -53,6 +55,19 @@ description: Professional coaching consultancy helping individuals and teams rea
                 </div>
                 {%- endfor -%}
             </div>
+            
+            <div class="founder-info" id="meet-emma">
+                <h3>Meet Emma</h3>
+                <p><strong>Emma Reynolds (she/her)</strong> is the founder of the greenhouse. A strategic leader with over a decade of experience leading research, design, product, innovation and transformation disciplines in the not-for-profit and social enterprise sector.</p>
+                
+                <p>Emma has influenced and shaped culture, products, strategy and experience across organisations including <strong>Battersea Dogs and Cats Home, Mental Health First Aid England, Campaign Against Living Miserably and Citizens Advice</strong>.</p>
+                
+                <p>As an <strong>ILM Level 7 coach and mentor</strong>, Emma has spent the last 5 years working with leaders across industries including sports, helping them grow, develop and thrive in their current roles and plan for future ones. She holds a <strong>post-graduate certificate in Psychodynamic and Person-centred Therapy from Goldsmiths</strong> and is currently studying a <strong>masters in Psychodynamic Psychotherapy</strong>.</p>
+                
+                <p>Beyond coaching, Emma is an embodied yoga teacher who writes about accessible and inclusive yoga practice in her newsletter <em>held</em>. She's a group facilitator for <strong>BEAT Eating Disorders</strong> and is training as a <strong>Birth Companion</strong> to support women and babies experiencing inequality and disadvantage.</p>
+                
+                <p>Emma is passionate about <strong>design justice, intersectionality and dismantling dominant systems</strong> through facilitative practice and strategic consultancy that centres marginalised and minoritised voices.</p>
+            </div>
         </div>
     </div>
 </section>
@@ -61,9 +76,8 @@ description: Professional coaching consultancy helping individuals and teams rea
 <section id="services" class="services-section">
     <div class="container">
         <div class="section-content">
-            <h2>Services</h2>
-            <p>Focused coaching services designed to help you clarify your purpose, develop your capabilities, and
-                achieve meaningful results.</p>
+            <h2>What We Do</h2>
+            <p>Three core coaching and consultancy services designed to help you, your team, and your ideas flourish:</p>
 
             <div class="services-grid">
                 {%- for service in site.services -%}
@@ -79,31 +93,12 @@ description: Professional coaching consultancy helping individuals and teams rea
     </div>
 </section>
 
-<!-- Testimonials Section -->
-<section id="testimonials" class="testimonials-section">
-    <div class="container">
-        <div class="section-content">
-            <h2>Testimonials</h2>
-            <p>What our clients say about their transformation journey.</p>
-
-            <div class="testimonials-grid">
-                {%- for testimonial in site.testimonials -%}
-                <div class="testimonial-card">
-                    <div class="testimonial-quote">{{ testimonial.quote }}</div>
-                    <div class="testimonial-author">{{ testimonial.author }}</div>
-                </div>
-                {%- endfor -%}
-            </div>
-        </div>
-    </div>
-</section>
-
 <!-- Contact Section -->
 <section id="contact" class="contact-section">
     <div class="container">
         <div class="section-content">
-            <h2>Contact</h2>
-            <p>Ready to begin? Let's start a conversation about your goals.</p>
+            <h2>Let's Grow Together</h2>
+            <p>Ready to start your growth journey? Whether you're looking for individual coaching, team development, or strategic consultancy, we'd love to hear from you.</p>
 
             {%- include contact-form.html -%}
         </div>

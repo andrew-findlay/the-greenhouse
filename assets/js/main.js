@@ -11,13 +11,13 @@ function closeNavigation() {
 function toggleMobileMenu() {
     const navMenu = document.getElementById('navMenu');
     const navToggleBtn = document.querySelector('.nav-toggle-btn');
-    
+
     navMenu.classList.toggle('active');
     navToggleBtn.classList.toggle('active');
 }
 
 // Smooth scrolling for navigation links
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Handle navigation clicks
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -64,10 +64,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // Form submission handling
     const contactForm = document.querySelector('.contact-form');
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+        contactForm.addEventListener('submit', function (e) {
             const submitBtn = this.querySelector('.submit-btn');
             const originalText = submitBtn.innerHTML;
-            
+
             submitBtn.innerHTML = '<span>Sending...</span> <span class="btn-icon">⏳</span>';
             submitBtn.disabled = true;
 

@@ -1,14 +1,14 @@
 # Site settings
 title: The Greenhouse
 email: hello@thegreenhouse.coach
-description: Professional coaching consultancy helping individuals and teams reach their potential.
+description: A coaching consultancy for people, teams and ideas. A place where things grow; with the recognition that everything within it has different needs, perspectives, experiences and outcomes.
 url: "https://andrew-findlay.github.io"
 baseurl: "/the-greenhouse"
 
 # Business info
 business:
   name: "The Greenhouse"
-  tagline: "Professional coaching consultancy"
+  tagline: "Where growth happens naturally"
   email: "hello@thegreenhouse.coach"
   phone: "+44 (0) 20 7123 4567"
   address: "London, UK"
@@ -19,41 +19,28 @@ navigation:
     url: "#about"
   - title: "Services"
     url: "#services"
-  - title: "Testimonials"
-    url: "#testimonials"
   - title: "Contact"
     url: "#contact"
 
 # Services
 services:
-  - title: "Leadership Coaching"
-    description: "Develop authentic leadership skills that inspire and drive results through focused one-on-one sessions."
-  - title: "Team Development"
-    description: "Build high-performing teams through strategic workshops and ongoing facilitation."
-  - title: "Career Transition"
-    description: "Navigate career changes with clarity and confidence through structured coaching programmes."
-  - title: "Executive Presence"
-    description: "Develop the gravitas and communication skills needed for senior leadership roles."
-  - title: "Strategic Planning"
-    description: "Create clear, actionable strategies that align with your vision and drive measurable results."
+  - title: "121 Leadership and Development Coaching"
+    description: "Delivering tangible areas of focus, actionable learning and a person-centred experience."
+  - title: "Team Development and Coaching"
+    description: "Delivering collective and shared areas of focus, actionable learning and a person-centred experience."
+  - title: "Strategic Ambitions and Ideas Growth"
+    description: "Delivering evidence and insight led ideas and frameworks to take to market, your organisation, your people."
 
 # About cards
 about_cards:
-  - title: "Clarity"
-    description: "We cut through complexity to help you see what matters most and create focused action plans."
-  - title: "Growth"
-    description: "Sustainable development through structured programmes that build lasting capabilities."
-  - title: "Results"
-    description: "Measurable outcomes that demonstrate real progress toward your most important goals."
+  - title: "People-Centred Practice"
+    description: "Everything within the greenhouse has different needs, perspectives, experiences and outcomes. We centre people and actively work against systems that harm and oppress."
+  - title: "Design Justice & Equity"
+    description: "Passionate about dismantling dominant systems through facilitative practice. Centring marginalised and minoritised voices in all creative and strategic work."
+  - title: "Intersectional Growth"
+    description: "A place where things grow naturally - supporting leaders, teams and ideas through evidence-based facilitation and strategic consultancy that recognises diverse experiences."
 
-# Testimonials
-testimonials:
-  - quote: "The coaching process helped me gain clarity on my leadership style and significantly improved my team's performance."
-    author: "Sarah Johnson, CEO"
-  - quote: "Professional, insightful, and transformative. The strategic planning session was exactly what our company needed."
-    author: "Michael Chen, Founder"
-  - quote: "I finally found my direction and confidence to make the career transition I'd been considering for years."
-    author: "Emma Wilson, Director"
+# Testimonials - removed as requested
 
 # Build settings
 markdown: kramdown

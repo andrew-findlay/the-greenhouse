@@ -3,6 +3,7 @@ layout: none
 ---
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,96 +11,98 @@ layout: none
     <title>Loading - The Greenhouse</title>
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
+
 <body>
 
-<!-- Loading Page -->
-<section id="loading" class="loading-section">
-    <div class="loading-container">
-        <!-- THE GREENHOUSE at top -->
-        <div class="loading-header">
-            <h1 class="loading-title">THE GREENHOUSE</h1>
-        </div>
+    <!-- Loading Page -->
+    <section id="loading" class="loading-section">
+        <div class="loading-container">
+            <!-- THE GREENHOUSE at top -->
+            <div class="loading-header">
+                <h1 class="loading-title">THE GREENHOUSE</h1>
+            </div>
 
-        <!-- Animated text area -->
-        <div class="animated-text-container">
-            <div class="animated-text" id="animatedText">
-                <span class="word" data-word="WE">
-                    <span class="letter">W</span>
-                    <span class="letter">E</span>
-                </span>
-                <span class="word-space"></span>
-                <span class="word" data-word="GROW">
-                    <span class="letter">G</span>
-                    <span class="letter">R</span>
-                    <span class="letter">O</span>
-                    <span class="letter">W</span>
-                </span>
-                <span class="word-space"></span>
-                <span class="word" data-word="YOU">
-                    <span class="letter">Y</span>
-                    <span class="letter">O</span>
-                    <span class="letter">U</span>
-                </span>
+            <!-- Animated text area -->
+            <div class="animated-text-container">
+                <div class="animated-text" id="animatedText">
+                    <span class="word" data-word="WE">
+                        <span class="letter">W</span>
+                        <span class="letter">E</span>
+                    </span>
+                    <span class="word-space"></span>
+                    <span class="word" data-word="GROW">
+                        <span class="letter">G</span>
+                        <span class="letter">R</span>
+                        <span class="letter">O</span>
+                        <span class="letter">W</span>
+                    </span>
+                    <span class="word-space"></span>
+                    <span class="word" data-word="YOU">
+                        <span class="letter">Y</span>
+                        <span class="letter">O</span>
+                        <span class="letter">U</span>
+                    </span>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<script>
-// Loading page animation and redirect
-document.addEventListener('DOMContentLoaded', function() {
-    function goToMainPage() {
-        window.location.href = '{{ "/main.html" | relative_url }}';
-    }
-    
-    // Add click handler to skip loading page
-    document.addEventListener('click', function() {
-        fadeOutAndRedirect();
-    });
-    
-    // Get all letters
-    const letters = document.querySelectorAll('.letter');
-    
-    // Function to animate letters in sequence
-    function animateLetters() {
-        letters.forEach((letter, index) => {
-            setTimeout(() => {
-                letter.classList.add('visible');
-            }, index * 100); // 100ms delay between each letter
+    <script>
+        // Loading page animation and redirect
+        document.addEventListener('DOMContentLoaded', function () {
+            function goToMainPage() {
+                window.location.href = '{{ "/main.html" | relative_url }}';
+            }
+
+            // Add click handler to skip loading page
+            document.addEventListener('click', function () {
+                fadeOutAndRedirect();
+            });
+
+            // Get all letters
+            const letters = document.querySelectorAll('.letter');
+
+            // Function to animate letters in sequence
+            function animateLetters() {
+                letters.forEach((letter, index) => {
+                    setTimeout(() => {
+                        letter.classList.add('visible');
+                    }, index * 100); // 100ms delay between each letter
+                });
+
+                // After all letters are shown, start the jarring animation
+                setTimeout(() => {
+                    startJarringAnimation();
+                }, letters.length * 100 + 800); // All letters + 800ms pause
+            }
+
+            // Jarring animation function
+            function startJarringAnimation() {
+                const animatedText = document.getElementById('animatedText');
+                animatedText.classList.add('jarring-animation');
+
+                // End jarring animation and start fade out
+                setTimeout(() => {
+                    fadeOutAndRedirect();
+                }, 2000); // 2 seconds of jarring animation
+            }
+
+            // Fade out function
+            function fadeOutAndRedirect() {
+                const loadingSection = document.getElementById('loading');
+                loadingSection.classList.add('fade-out');
+
+                // Redirect after fade completes
+                setTimeout(() => {
+                    goToMainPage();
+                }, 500); // 500ms fade out
+            }
+
+            // Start the animation sequence
+            setTimeout(animateLetters, 500); // Start after 0.5 seconds
         });
-        
-        // After all letters are shown, start the jarring animation
-        setTimeout(() => {
-            startJarringAnimation();
-        }, letters.length * 100 + 800); // All letters + 800ms pause
-    }
-    
-    // Jarring animation function
-    function startJarringAnimation() {
-        const animatedText = document.getElementById('animatedText');
-        animatedText.classList.add('jarring-animation');
-        
-        // End jarring animation and start fade out
-        setTimeout(() => {
-            fadeOutAndRedirect();
-        }, 2000); // 2 seconds of jarring animation
-    }
-    
-    // Fade out function
-    function fadeOutAndRedirect() {
-        const loadingSection = document.getElementById('loading');
-        loadingSection.classList.add('fade-out');
-        
-        // Redirect after fade completes
-        setTimeout(() => {
-            goToMainPage();
-        }, 500); // 500ms fade out
-    }
-    
-    // Start the animation sequence
-    setTimeout(animateLetters, 500); // Start after 0.5 seconds
-});
-</script>
+    </script>
 
 </body>
+
 </html>

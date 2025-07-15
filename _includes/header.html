@@ -4,14 +4,14 @@
         <button class="nav-toggle-btn" aria-label="Toggle navigation">
             <span class="nav-toggle-icon">+</span>
         </button>
-        
+
         <!-- Hidden navigation menu -->
         <ul class="nav-menu" id="navMenu">
             {%- for item in site.navigation -%}
             <li><a href="{{ item.url }}">{{ item.title }}</a></li>
             {%- endfor -%}
         </ul>
-        
+
         <!-- Mobile menu button (hidden by default) -->
         <button class="mobile-menu-btn" aria-label="Toggle menu" onclick="toggleMobileMenu()" style="display: none;">
             <span></span>
