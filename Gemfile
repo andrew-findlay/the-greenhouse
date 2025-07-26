@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
-gem "jekyll", "~> 4.3.0"
-gem "minima", "~> 2.5"
+# Use GitHub Pages gem which includes the correct Jekyll version
+gem "github-pages", group: :jekyll_plugins
 
 # Ruby 3.4+ compatibility
 gem "csv"
