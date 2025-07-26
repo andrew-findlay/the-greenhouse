@@ -1,108 +1,106 @@
 ---
-layout: none
+layout: default
+title: Home
+description: Professional coaching consultancy helping individuals and teams reach their potential.
 ---
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Loading - The Greenhouse</title>
-    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-</head>
+<!-- Title Section -->
+<section id="title" class="title-section">
+    <div class="container">
+        <div class="title-content">
+            <h1 class="main-title">
+                <span class="title-word word-1">The</span>
+                <span class="title-word word-2">Greenhouse</span>
+            </h1>
+        </div>
+    </div>
+</section>
 
-<body>
-
-    <!-- Loading Page -->
-    <section id="loading" class="loading-section">
-        <div class="loading-container">
-            <!-- THE GREENHOUSE at top -->
-            <div class="loading-header">
-                <h1 class="loading-title">THE GREENHOUSE</h1>
+<!-- Hero Section with Three Sections -->
+<section id="home" class="hero-section">
+    <div class="container">
+        <div class="hero-content">
+            <div class="hero-left">
+                <a href="#about" class="hero-link">About</a>
             </div>
-
-            <!-- Animated text area -->
-            <div class="animated-text-container">
-                <div class="animated-text" id="animatedText">
-                    <span class="word" data-word="WE">
-                        <span class="letter">W</span>
-                        <span class="letter">E</span>
-                    </span>
-                    <span class="word-space"></span>
-                    <span class="word" data-word="GROW">
-                        <span class="letter">G</span>
-                        <span class="letter">R</span>
-                        <span class="letter">O</span>
-                        <span class="letter">W</span>
-                    </span>
-                    <span class="word-space"></span>
-                    <span class="word" data-word="YOU">
-                        <span class="letter">Y</span>
-                        <span class="letter">O</span>
-                        <span class="letter">U</span>
-                    </span>
+            <div class="hero-center">
+                <div class="hero-image">
+                    <a href="#meet-emma">
+                        <img src="{{ '/assets/images/profile-photo.jpeg' | relative_url }}" alt="Profile Photo"
+                            class="profile-photo">
+                    </a>
                 </div>
             </div>
+            <div class="hero-right">
+                <a href="#services" class="hero-link">Services</a>
+            </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <script>
-        // Loading page animation and redirect
-        document.addEventListener('DOMContentLoaded', function () {
-            function goToMainPage() {
-                window.location.href = '{{ "/main.html" | relative_url }}';
-            }
+<!-- About Section -->
+<section id="about" class="about-section">
+    <div class="container">
+        <div class="section-content">
+            <h2>About The Greenhouse</h2>
+            <p>A coaching consultancy for people, teams and ideas. The greenhouse exists as a place where things grow; with the recognition that everything within it has different needs, perspectives, experiences and outcomes.</p>
+            
+            <p>It is a place that centres people and recognises the systems and structures in place that can harm and oppress, and works actively against these, advocating and delivering an equitable practice.</p>
 
-            // Add click handler to skip loading page
-            document.addEventListener('click', function () {
-                fadeOutAndRedirect();
-            });
+            <div class="about-grid">
+                {%- for card in site.about_cards -%}
+                <div class="about-card">
+                    <h3>{{ card.title }}</h3>
+                    <p>{{ card.description }}</p>
+                </div>
+                {%- endfor -%}
+            </div>
+            
+            <div class="founder-info" id="meet-emma">
+                <h3>Meet Emma</h3>
+                <p><strong>Emma Reynolds (she/her)</strong> is the founder of the greenhouse. A strategic leader with over a decade of experience leading research, design, product, innovation and transformation disciplines in the not-for-profit and social enterprise sector.</p>
+                
+                <p>Emma has influenced and shaped culture, products, strategy and experience across organisations including <strong>Battersea Dogs and Cats Home, Mental Health First Aid England, Campaign Against Living Miserably and Citizens Advice</strong>.</p>
+                
+                <p>As an <strong>ILM Level 7 coach and mentor</strong>, Emma has spent the last 5 years working with leaders across industries including sports, helping them grow, develop and thrive in their current roles and plan for future ones. She holds a <strong>post-graduate certificate in Psychodynamic and Person-centred Therapy from Goldsmiths</strong> and is currently studying a <strong>masters in Psychodynamic Psychotherapy</strong>.</p>
+                
+                <p>Beyond coaching, Emma is an embodied yoga teacher who writes about accessible and inclusive yoga practice in her newsletter <em>held</em>. She's a group facilitator for <strong>BEAT Eating Disorders</strong> and is training as a <strong>Birth Companion</strong> to support women and babies experiencing inequality and disadvantage.</p>
+                
+                <p>Emma is passionate about <strong>design justice, intersectionality and dismantling dominant systems</strong> through facilitative practice and strategic consultancy that centres marginalised and minoritised voices.</p>
+            </div>
+        </div>
+    </div>
+</section>
 
-            // Get all letters
-            const letters = document.querySelectorAll('.letter');
+<!-- Services Section -->
+<section id="services" class="services-section">
+    <div class="container">
+        <div class="section-content">
+            <h2>What We Do</h2>
+            <p>Three core coaching and consultancy services designed to help you, your team, and your ideas flourish:</p>
 
-            // Function to animate letters in sequence
-            function animateLetters() {
-                letters.forEach((letter, index) => {
-                    setTimeout(() => {
-                        letter.classList.add('visible');
-                    }, index * 100); // 100ms delay between each letter
-                });
+            <div class="services-grid">
+                {%- for service in site.services -%}
+                <div class="service-card">
+                    <div class="service-content">
+                        <h3>{{ service.title }}</h3>
+                        <p>{{ service.description }}</p>
+                    </div>
+                </div>
+                {%- endfor -%}
+            </div>
+        </div>
+    </div>
+</section>
 
-                // After all letters are shown, start the jarring animation
-                setTimeout(() => {
-                    startJarringAnimation();
-                }, letters.length * 100 + 800); // All letters + 800ms pause
-            }
+<!-- Contact Section -->
+<section id="contact" class="contact-section">
+    <div class="container">
+        <div class="section-content">
+            <h2>Let's Grow Together</h2>
+            <p>Ready to start your growth journey? Whether you're looking for individual coaching, team development, or strategic consultancy, we'd love to hear from you.</p>
 
-            // Jarring animation function
-            function startJarringAnimation() {
-                const animatedText = document.getElementById('animatedText');
-                animatedText.classList.add('jarring-animation');
-
-                // End jarring animation and start fade out
-                setTimeout(() => {
-                    fadeOutAndRedirect();
-                }, 2000); // 2 seconds of jarring animation
-            }
-
-            // Fade out function
-            function fadeOutAndRedirect() {
-                const loadingSection = document.getElementById('loading');
-                loadingSection.classList.add('fade-out');
-
-                // Redirect after fade completes
-                setTimeout(() => {
-                    goToMainPage();
-                }, 500); // 500ms fade out
-            }
-
-            // Start the animation sequence
-            setTimeout(animateLetters, 500); // Start after 0.5 seconds
-        });
-    </script>
-
-</body>
-
-</html>
+            {%- include contact-form.html -%}
+        </div>
+    </div>
+</section>
